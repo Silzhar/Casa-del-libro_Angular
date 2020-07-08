@@ -1,14 +1,10 @@
 # Angular Sesión 6 - Ejercicios
 
-Vamos a hacer nuestra web de libros!
-
-Vas a ver como juntando lo que hemos ido aprendiendo:
 
 - Peticiones a APIS
 - Enrutamiento
 - Componentes
 
-Eres capaz de crear tu catálogo de libros al más puro estilo La Casa Del Libro.
 
 Cuando acabes tu web debería lucir así:
 
