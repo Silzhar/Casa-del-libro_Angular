@@ -1,0 +1,21 @@
+.logoCasaL{
+    background-color: green;
+    text-align: center;
+    padding: 4px;
+    box-shadow: 10px 12px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.header {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    background-color: green;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+
+    &__menu {
+        color: white;
+        font-size: 20px;
+    }
+}
+
+

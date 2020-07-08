@@ -1,0 +1,15 @@
+<h1 class="text">Libros </h1>
+<article *ngFor='let libro of librosList' class="libros">
+    <div class="libros__box">
+        <div class="libros__image--cont">
+            <img class="libros__img" src="{{ libro.imageUrl }}">
+        </div>
+            
+        <div class="libros__detail--cont">
+            <p class="libros__title">{{ libro.title }}</p>
+            <p class="libros__author">{{ libro.author }}</p>
+            <span class="libros__new" *ngIf='libro.isNew'>¡Nuevo!</span>
+        </div>
+    </div>
+    
+</article>

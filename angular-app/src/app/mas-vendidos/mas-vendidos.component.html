@@ -1,0 +1,16 @@
+<h1 class="text">Más vendidos </h1>
+
+<article *ngFor='let vendidos of vendidosList' class="libros">
+    <div class="libros__box">
+        <div class="libros__image--cont">
+            <img class="libros__img" src="{{ vendidos.imageUrl }}">
+        </div>
+            
+        <div class="libros__detail--cont">
+            <p class="libros__title">{{ vendidos.title }}</p>
+            <p class="libros__author">{{ vendidos.author }}</p>
+            <span class="libros__new" *ngIf='vendidos.isNew'>¡Nuevo!</span>
+        </div>
+    </div>
+    
+</article>
