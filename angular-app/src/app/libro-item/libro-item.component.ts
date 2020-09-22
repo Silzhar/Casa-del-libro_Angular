@@ -13,6 +13,8 @@ export class LibroItemComponent implements OnInit {
   constructor(private librosService: LibrosService, private router: Router) { }
 
   ngOnInit(): void {
+    // Guardar en servicio el último pulsado.
+    this.libro = this.librosService.getLastproductClick();
   }
 
   public goToDetail() {

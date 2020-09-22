@@ -19,7 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
     RecomendadosComponent,
     MasVendidosComponent,
     HeaderComponent,
-    LibroItemComponent
+    LibroItemComponent,
   ],
   imports: [
     BrowserModule,
