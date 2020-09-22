@@ -9,6 +9,7 @@
             <p class="libros__title">{{ libro.title }}</p>
             <p class="libros__author">{{ libro.author }}</p>
             <span class="libros__new" *ngIf='libro.isNew'>¡Nuevo!</span>
+            <button (click)="goToDetail()">Descripción</button>
         </div>
     </div>
     

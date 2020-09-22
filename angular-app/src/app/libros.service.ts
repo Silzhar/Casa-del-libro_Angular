@@ -44,6 +44,7 @@ export class LibrosService {
 
   public setLastproductClick(product: Libro) {
     this.lastproductClick = product;
+    return null;
   }
 
   public getLastproductClick(): Libro {
