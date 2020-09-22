@@ -12,32 +12,42 @@ const vendidosUrl: string = 'https://jsonblob.com/api/cbbe6183-9cd5-11ea-9a4c-39
   providedIn: 'root'
 })
 export class LibrosService {
+  private lastproductClick: Libro = null;
+
   public librosList: Libro[] = [];
 
   constructor(private httpClient: HttpClient) { }
 
-  getLibros(): Observable<Libro[]> {
+  public getLibros(): Observable<Libro[]> {
     const libros: Observable<Libro[]> = this.httpClient.get(
       librosUrl ) as Observable<Libro[]>;
     return libros;
   }
 
-  getEbooks(): Observable<Libro[]> {
+  public getEbooks(): Observable<Libro[]> {
     const eboobs: Observable<Libro[]> = this.httpClient.get(
       ebooksUrl ) as Observable<Libro[]>;
     return eboobs;
   }
 
-  getRecomendados(): Observable<Libro[]> {
+  public getRecomendados(): Observable<Libro[]> {
     const recomendados: Observable<Libro[]> = this.httpClient.get(
       recomendadosdUrl ) as Observable<Libro[]>;
     return recomendados;
   }
 
-  getVendidos(): Observable<Libro[]> {
+  public getVendidos(): Observable<Libro[]> {
     const vendidos: Observable<Libro[]> = this.httpClient.get(
       vendidosUrl ) as Observable<Libro[]>;
     return vendidos;
+  }
+
+  public setLastproductClick(product: Libro) {
+    this.lastproductClick = product;
+  }
+
+  public getLastproductClick(): Libro {
+    return this.lastproductClick;
   }
 
 }
