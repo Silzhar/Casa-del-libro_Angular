@@ -15,10 +15,10 @@ const routes: Routes = [
   { path: 'recomendados', component: RecomendadosComponent },
   { path: 'mas-vendidos', component: MasVendidosComponent },
   { path: 'detail/:name', component: LibroItemComponent },
-  {
-    path: 'detail/:name', loadChildren: () =>
-      import('./libro-item/libro-item.component').then(m => m.LibroItemComponent)
-  }
+  // {
+  //   path: 'detail/:name', loadChildren: () =>
+  //     import('./libro-item/libro-item.component').then(m => m.LibroItemComponent)
+  // }
 
 ];
 
