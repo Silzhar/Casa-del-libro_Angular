@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Libro, LibrosService } from '../libros.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-libro-item',
@@ -6,10 +8,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./libro-item.component.scss']
 })
 export class LibroItemComponent implements OnInit {
+  public libro: Libro = null;
 
-  constructor() { }
+  constructor(private librosService: LibrosService, private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  public goToDetail() {
+    // Guardar en servicio el último pulsado.
+    this.librosService.setLastproductClick(this.libro);
+
+    this.router.navigateByUrl('/detail/' + this.libro.title);
   }
 
 }

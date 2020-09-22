@@ -1,1 +1,15 @@
-<p>libro-item works!</p>
+<h1>Detalles del producto</h1>
+<article  class="product" (click)="goToDetail()">
+    <div class="product__box">
+        <div class="product__image--cont">
+            <img class="product__img" src="{{ libro.imageUrl }}">
+        </div>
+            
+        <div class="product__detail--cont">
+            <p class="product__title">{{ libro.title }}</p>
+            <p class="product__author">{{ libro.author }}</p>
+            <span class="product__new" *ngIf='libro.isNew'>¡Nuevo!</span>
+        </div>
+    </div>
+    
+</article>

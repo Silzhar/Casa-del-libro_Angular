@@ -8,7 +8,8 @@ import { Libro, LibrosService } from '../libros.service';
 })
 export class LibrosListComponent implements OnInit {
   public librosList: Libro[] = [];
-  
+  // tslint:disable-next-line: no-trailing-whitespace
+
   constructor(private librosService: LibrosService) { }
 
   ngOnInit(): void {
